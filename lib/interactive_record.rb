@@ -12,9 +12,9 @@ class InteractiveRecord
 
     sql = "PRAGMA table_info('#{table_name}')"
 
-    val = DB[:conn].execute(sql).map{|col| col["name"]}
+    DB[:conn].execute(sql).map{|col| col["name"]}
 
-    binding.pry
+    # binding.pry
 
     # self.column_names.each{|col_name| attr_accessor col_name.to_s}
   end
