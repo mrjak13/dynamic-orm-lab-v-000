@@ -60,7 +60,7 @@ class InteractiveRecord
     val = DB[:conn].execute(sql)
 
     val
-    
+
 
     # binding.pry
 
