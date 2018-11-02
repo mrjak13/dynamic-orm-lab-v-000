@@ -57,9 +57,9 @@ class InteractiveRecord
 
     # "SELECT * FROM #{self.table_name} WHERE #{column_names[1]} = '#{var.values[0]}'"
 
-    val = DB[:conn].execute(sql)
+    DB[:conn].execute(sql)
 
-    val
+    
 
 
     # binding.pry
