@@ -31,8 +31,7 @@ class InteractiveRecord
     self.class.column_names.each do |col_name|
       values << "'#{col_name}'" unless send(col_name).nil?
     end
-    binding.pry
-    values
+    values.join(" ")
   end
 
 
