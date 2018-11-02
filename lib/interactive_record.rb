@@ -51,10 +51,12 @@ class InteractiveRecord
   end
 
   def self.find_by(var)
-    binding.pry
+
     sql = "SELECT * FROM #{self.table_name} WHERE #{column_names[0]} = '#{var}' OR #{column_names[1]} = '#{var}' OR #{column_names[2]} = '#{var}'"
 
     val = DB[:conn].execute(sql)
+
+    binding.pry
 
 
 
