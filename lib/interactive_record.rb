@@ -9,16 +9,13 @@ class InteractiveRecord
 
   def self.column_names
     DB[:conn].results_as_hash = true
-    binding.pry
 
     sql = "PRAGMA table_info('#{table_name}')"
-    # sql = "PRAGMA table_info('#{table_name}')"
-
 
     info = DB[:conn].execute(sql)
     column_names = []
 
-    table_info{|col| column_names << col["name"]}
+    info{|col| column_names << col["name"]}
     # binding.pry
 
   end
