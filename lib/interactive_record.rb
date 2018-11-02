@@ -53,7 +53,7 @@ class InteractiveRecord
 
   def self.find_by(var)
 
-    sql = "SELECT * FROM #{self.table_name} WHERE #{column_names[0]} = '#{var}' OR #{column_names[1]} = '#{var}' OR #{column_names[2]} = '#{var}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{column_names[0]} = '#{var.values[0]}' OR #{column_names[1]} = '#{var.values[0]}' OR #{column_names[2]} = '#{var.values[0]}'"
 
     # "SELECT * FROM #{self.table_name} WHERE #{column_names[1]} = '#{var.values[0]}'"
 
