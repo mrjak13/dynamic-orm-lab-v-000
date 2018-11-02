@@ -18,12 +18,13 @@ class InteractiveRecord
   end
 
   # def add_attr_accessors
+  binding.pry
     self.column_names.each do |col_name|
       binding.pry
       attr_accessor col_name.to_s
     end
-    
-  
+
+
 
 
 
