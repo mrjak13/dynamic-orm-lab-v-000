@@ -22,6 +22,7 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
+    binding.pry
 
   end
 end
