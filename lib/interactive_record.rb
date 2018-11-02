@@ -14,10 +14,10 @@ class InteractiveRecord
 
     DB[:conn].execute(sql).map {|col| col["name"]}
 
-    self.column_names.each{|col_name| attr_accessor col_name.to_s}
+    # self.column_names.each{|col_name| attr_accessor col_name.to_s}
   end
 
-  # self.column_names.each{|col_name| attr_accessor col_name.to_s}
+  self.column_names.each{|col_name| attr_accessor col_name.to_s}
 
 
 
