@@ -17,8 +17,12 @@ class InteractiveRecord
     # self.column_names.each{|col_name| attr_accessor col_name.to_s}
   end
 
-  def add_attr_accessors
-    self.column_names.each{|col_name| attr_accessor col_name.to_s}
+  # def add_attr_accessors
+    self.column_names.each do |col_name|
+      binding.pry
+      attr_accessor col_name.to_s
+    end
+    
   end
 
 
