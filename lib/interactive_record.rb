@@ -52,8 +52,8 @@ class InteractiveRecord
 
   def self.find_by(var)
     binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE name = '#{var}'"
-    
+    sql = "SELECT * FROM #{self.table_name} WHERE #{column_names[0]} = '#{var}' OR #{column_names[1]} = '#{var}' OR #{column_names[2]} = '#{var}'"
+
 
   end
 
