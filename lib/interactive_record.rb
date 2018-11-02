@@ -14,12 +14,16 @@ class InteractiveRecord
 
     val = DB[:conn].execute(sql).map{|col| col["name"]}
 
-    val.each{|col_name| attr_accessor col_name.to_s}
+    val
   end
+
+    self.column_names.each{|col_name| attr_accessor col_name.to_s}
 
   def table_name_for_insert
-    binding.pry
+    self.class.table_name
   end
 
+  def col_names_for_insert
 
+  end
 end
