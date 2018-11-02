@@ -14,7 +14,7 @@ class InteractiveRecord
     PRAGMA table_info ('#{table_name}')
     SQL
 
-    table_info = DB[:conn].execute(sql)
+    info = DB[:conn].execute(sql)
     column_names = []
 
     table_info{|col| column_names << col["name"]}
