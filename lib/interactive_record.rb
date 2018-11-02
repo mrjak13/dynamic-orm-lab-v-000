@@ -14,10 +14,8 @@ class InteractiveRecord
 
     val = DB[:conn].execute(sql).map{|col| col["name"]}
 
-    val
+    val.each{|col_name| attr_accessor col_name.to_s}
   end
-
-    self.column_names.each{|col_name| attr_accessor col_name.to_s}
 
   def table_name_for_insert
     self.class.table_name
