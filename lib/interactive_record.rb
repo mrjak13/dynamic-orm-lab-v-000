@@ -23,7 +23,7 @@ class InteractiveRecord
       attr_accessor col_name.to_s
     end
     
-  end
+  
 
 
 
